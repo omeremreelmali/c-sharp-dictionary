@@ -97,7 +97,6 @@ C:\Users\RedVizor\Desktop\WindowsFormsApp11\WindowsFormsApp7\WindowsFormsApp6\ob
 C:\Users\RedVizor\Desktop\WindowsFormsApp11\WindowsFormsApp7\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.MainBase.resources
 C:\Users\RedVizor\Desktop\WindowsFormsApp11\WindowsFormsApp7\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.Properties.Resources.resources
 C:\Users\RedVizor\Desktop\WindowsFormsApp11\WindowsFormsApp7\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.Search.resources
-C:\Users\RedVizor\Desktop\WindowsFormsApp11\WindowsFormsApp7\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.SorularControl.resources
 C:\Users\RedVizor\Desktop\WindowsFormsApp11\WindowsFormsApp7\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.TabSign.resources
 C:\Users\RedVizor\Desktop\WindowsFormsApp11\WindowsFormsApp7\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.TabSignUp.resources
 C:\Users\RedVizor\Desktop\WindowsFormsApp11\WindowsFormsApp7\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.csproj.GenerateResource.cache
@@ -105,3 +104,4 @@ C:\Users\RedVizor\Desktop\WindowsFormsApp11\WindowsFormsApp7\WindowsFormsApp6\ob
 C:\Users\RedVizor\Desktop\WindowsFormsApp11\WindowsFormsApp7\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.csproj.CopyComplete
 C:\Users\RedVizor\Desktop\WindowsFormsApp11\WindowsFormsApp7\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.exe
 C:\Users\RedVizor\Desktop\WindowsFormsApp11\WindowsFormsApp7\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.pdb
+C:\Users\RedVizor\Desktop\WindowsFormsApp11\WindowsFormsApp7\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.QuizPage.resources

@@ -113,7 +113,7 @@ namespace WindowsFormsApp6
             Classes.Tools.pageDirects("LearnWord");
         }
 
-   
+       
     }
  }
 

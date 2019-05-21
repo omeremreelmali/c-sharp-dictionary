@@ -26,23 +26,43 @@ namespace WindowsFormsApp6.Classes
         public int userGetID(string userName)
         {
             int userID = 0;
-            mainConnect();
-            MySqlCommand userIDCommand = new MySqlCommand("SELECT id from users WHERE username='" + userName + "' ", mainDatabeseConn);
-            MySqlDataReader reader = userIDCommand.ExecuteReader();
-            reader.Read();
-            userID = reader.GetInt32("id");
-            mainConnect();
+            try
+            {
+                mainConnect();
+                MySqlCommand userIDCommand = new MySqlCommand("SELECT id from users WHERE username='" + userName + "' ", mainDatabeseConn);
+                MySqlDataReader reader = userIDCommand.ExecuteReader();
+                reader.Read();
+                userID = reader.GetInt32("id");
+                mainConnect();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                mainConnect();
+            }
+            
             return userID;
         }
         public string userGetUserName(string id)
         {
             string userName = null;
-            mainConnect();
-            MySqlCommand userIDCommand = new MySqlCommand("SELECT username from users WHERE id='" + id + "' ", mainDatabeseConn);
-            MySqlDataReader reader = userIDCommand.ExecuteReader();
-            reader.Read();
-            userName = reader.GetString("username").ToString();
-            mainConnect();
+
+            try
+            {
+                mainConnect();
+                MySqlCommand userIDCommand = new MySqlCommand("SELECT username from users WHERE id='" + id + "' ", mainDatabeseConn);
+                MySqlDataReader reader = userIDCommand.ExecuteReader();
+                reader.Read();
+                userName = reader.GetString("username").ToString();
+                mainConnect();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                mainConnect();
+            }
+
+            
             return userName;
         }
 
@@ -50,6 +70,7 @@ namespace WindowsFormsApp6.Classes
         {
             if (!Form1.Instance.PnlContainer.Controls.ContainsKey(page))
             {
+                Form1.Instance.PnlContainer.Controls.Clear();
                 if ("AddWord"==page)
                 {
                     AddWord aw = new AddWord();
@@ -85,6 +106,12 @@ namespace WindowsFormsApp6.Classes
                     TabSign si = new TabSign();
                     si.Dock = DockStyle.Fill;
                     Form1.Instance.PnlContainer.Controls.Add(si);
+                }
+                if ("QuizPage" == page)
+                {
+                    QuizPage qp = new QuizPage();
+                    qp.Dock = DockStyle.Fill;
+                    Form1.Instance.PnlContainer.Controls.Add(qp);
                 }
 
             }

@@ -29,9 +29,10 @@ namespace WindowsFormsApp6.Classes
                     int id = appTools.userGetID(userName);
                     userword.userWordTableCreate(id);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    MessageBox.Show(e.ToString());
+                    MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                    mainConnect();
                 }
             }
             else
@@ -45,14 +46,24 @@ namespace WindowsFormsApp6.Classes
         {
             int userCount = 0;
             bool userControlResult = true;
-            mainConnect();
-            MySqlCommand userControlCommand = new MySqlCommand("SELECT * from users WHERE username='" + userName + "' OR email= '" + email + "' ", mainDatabeseConn);
-            userCount = Convert.ToInt32(userControlCommand.ExecuteScalar());
-            if (userCount > 0)
+            try
             {
-                userControlResult = false;
+                mainConnect();
+                MySqlCommand userControlCommand = new MySqlCommand("SELECT * from users WHERE username='" + userName + "' OR email= '" + email + "' ", mainDatabeseConn);
+                userCount = Convert.ToInt32(userControlCommand.ExecuteScalar());
+                if (userCount > 0)
+                {
+                    userControlResult = false;
+                }
+                mainConnect();
             }
-            mainConnect();
+            catch (Exception)
+            {
+                MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                mainConnect();
+            }
+            
+            
             return userControlResult;
         }
 

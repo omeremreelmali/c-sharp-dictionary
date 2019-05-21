@@ -45,18 +45,18 @@
             this.randomButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.myListButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.updatePanel = new System.Windows.Forms.Panel();
+            this.wordIDLabel = new System.Windows.Forms.Label();
+            this.updateCloseButton = new Bunifu.Framework.UI.BunifuImageButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.updateWordButton2 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.trWordTextBox = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.enWordTextBox = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.updateCloseButton = new Bunifu.Framework.UI.BunifuImageButton();
-            this.wordIDLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.AddWordPageButton)).BeginInit();
             this.updatePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.updateCloseButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updateCloseButton)).BeginInit();
             this.SuspendLayout();
             // 
             // searchButton
@@ -307,11 +307,36 @@
             this.updatePanel.Controls.Add(this.updateWordButton2);
             this.updatePanel.Controls.Add(this.trWordTextBox);
             this.updatePanel.Controls.Add(this.enWordTextBox);
-            this.updatePanel.Location = new System.Drawing.Point(29, 63);
+            this.updatePanel.Location = new System.Drawing.Point(29, 48);
             this.updatePanel.Name = "updatePanel";
             this.updatePanel.Size = new System.Drawing.Size(492, 309);
             this.updatePanel.TabIndex = 22;
             this.updatePanel.Visible = false;
+            // 
+            // wordIDLabel
+            // 
+            this.wordIDLabel.AutoSize = true;
+            this.wordIDLabel.Location = new System.Drawing.Point(224, 30);
+            this.wordIDLabel.Name = "wordIDLabel";
+            this.wordIDLabel.Size = new System.Drawing.Size(47, 13);
+            this.wordIDLabel.TabIndex = 28;
+            this.wordIDLabel.Text = "Word ID";
+            this.wordIDLabel.Visible = false;
+            // 
+            // updateCloseButton
+            // 
+            this.updateCloseButton.BackColor = System.Drawing.Color.Transparent;
+            this.updateCloseButton.Image = ((System.Drawing.Image)(resources.GetObject("updateCloseButton.Image")));
+            this.updateCloseButton.ImageActive = null;
+            this.updateCloseButton.Location = new System.Drawing.Point(468, 2);
+            this.updateCloseButton.Margin = new System.Windows.Forms.Padding(2);
+            this.updateCloseButton.Name = "updateCloseButton";
+            this.updateCloseButton.Size = new System.Drawing.Size(22, 24);
+            this.updateCloseButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.updateCloseButton.TabIndex = 27;
+            this.updateCloseButton.TabStop = false;
+            this.updateCloseButton.Zoom = 20;
+            this.updateCloseButton.Click += new System.EventHandler(this.UpdateCloseButton_Click);
             // 
             // pictureBox2
             // 
@@ -399,31 +424,6 @@
             this.enWordTextBox.TabIndex = 22;
             this.enWordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // updateCloseButton
-            // 
-            this.updateCloseButton.BackColor = System.Drawing.Color.Transparent;
-            this.updateCloseButton.Image = ((System.Drawing.Image)(resources.GetObject("updateCloseButton.Image")));
-            this.updateCloseButton.ImageActive = null;
-            this.updateCloseButton.Location = new System.Drawing.Point(468, 2);
-            this.updateCloseButton.Margin = new System.Windows.Forms.Padding(2);
-            this.updateCloseButton.Name = "updateCloseButton";
-            this.updateCloseButton.Size = new System.Drawing.Size(22, 24);
-            this.updateCloseButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.updateCloseButton.TabIndex = 27;
-            this.updateCloseButton.TabStop = false;
-            this.updateCloseButton.Zoom = 20;
-            this.updateCloseButton.Click += new System.EventHandler(this.UpdateCloseButton_Click);
-            // 
-            // wordIDLabel
-            // 
-            this.wordIDLabel.AutoSize = true;
-            this.wordIDLabel.Location = new System.Drawing.Point(224, 30);
-            this.wordIDLabel.Name = "wordIDLabel";
-            this.wordIDLabel.Size = new System.Drawing.Size(47, 13);
-            this.wordIDLabel.TabIndex = 28;
-            this.wordIDLabel.Text = "Word ID";
-            this.wordIDLabel.Visible = false;
-            // 
             // Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -446,9 +446,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.AddWordPageButton)).EndInit();
             this.updatePanel.ResumeLayout(false);
             this.updatePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.updateCloseButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updateCloseButton)).EndInit();
             this.ResumeLayout(false);
 
         }
