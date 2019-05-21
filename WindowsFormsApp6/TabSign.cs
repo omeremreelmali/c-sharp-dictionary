@@ -16,18 +16,8 @@ namespace WindowsFormsApp6
         {
             InitializeComponent();
         }
-
-        private void BunifuThinButton22_Click(object sender, EventArgs e)
-        {
-            if (!Form1.Instance.PnlContainer.Controls.ContainsKey("TabSignUp"))
-            {
-                TabSignUp su = new TabSignUp();
-                su.Dock = DockStyle.Fill;
-                Form1.Instance.PnlContainer.Controls.Add(su);
-
-            }
-            Form1.Instance.PnlContainer.Controls["TabSignUp"].BringToFront();
-        }
+        
+        
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
@@ -45,8 +35,12 @@ namespace WindowsFormsApp6
             else
             {
                 MessageBox.Show("Giriş Başarılı");
+                Classes.LoginUser.userlogin = true;
+                Classes.LoginUser.userID = user[0];
+                Classes.LoginUser.userRealName = user[1];
+                Classes.LoginUser.userName = user[2];
             }
-           
+
 
         }
 
@@ -59,6 +53,11 @@ namespace WindowsFormsApp6
         private void TabSign_Load(object sender, EventArgs e)
         {
            
+        }
+
+        private void TabSignUpPageButton_Click(object sender, EventArgs e)
+        {
+            Classes.Tools.pageDirects("TabSignUp");
         }
     }
 }

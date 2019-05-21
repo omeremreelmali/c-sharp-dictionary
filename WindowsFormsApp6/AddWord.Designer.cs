@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddWord));
-            this.userNameText = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.trWord = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.enWordTextBox = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.trWordTextBox = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.addWordButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -38,43 +38,43 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // userNameText
+            // enWordTextBox
             // 
-            this.userNameText.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.userNameText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.userNameText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.userNameText.HintForeColor = System.Drawing.Color.Empty;
-            this.userNameText.HintText = "İngilizce kelimeyi giriniz";
-            this.userNameText.isPassword = false;
-            this.userNameText.LineFocusedColor = System.Drawing.Color.Blue;
-            this.userNameText.LineIdleColor = System.Drawing.Color.Gray;
-            this.userNameText.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.userNameText.LineThickness = 3;
-            this.userNameText.Location = new System.Drawing.Point(211, 136);
-            this.userNameText.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.userNameText.Name = "userNameText";
-            this.userNameText.Size = new System.Drawing.Size(321, 39);
-            this.userNameText.TabIndex = 14;
-            this.userNameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.enWordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.enWordTextBox.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.enWordTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.enWordTextBox.HintForeColor = System.Drawing.Color.Empty;
+            this.enWordTextBox.HintText = "İngilizce kelimeyi giriniz";
+            this.enWordTextBox.isPassword = false;
+            this.enWordTextBox.LineFocusedColor = System.Drawing.Color.Blue;
+            this.enWordTextBox.LineIdleColor = System.Drawing.Color.Gray;
+            this.enWordTextBox.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.enWordTextBox.LineThickness = 3;
+            this.enWordTextBox.Location = new System.Drawing.Point(158, 110);
+            this.enWordTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.enWordTextBox.Name = "enWordTextBox";
+            this.enWordTextBox.Size = new System.Drawing.Size(241, 32);
+            this.enWordTextBox.TabIndex = 14;
+            this.enWordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // trWord
+            // trWordTextBox
             // 
-            this.trWord.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.trWord.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.trWord.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.trWord.HintForeColor = System.Drawing.Color.Empty;
-            this.trWord.HintText = "Türkçe kelimeyi giriniz";
-            this.trWord.isPassword = false;
-            this.trWord.LineFocusedColor = System.Drawing.Color.Blue;
-            this.trWord.LineIdleColor = System.Drawing.Color.Gray;
-            this.trWord.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.trWord.LineThickness = 3;
-            this.trWord.Location = new System.Drawing.Point(211, 200);
-            this.trWord.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.trWord.Name = "trWord";
-            this.trWord.Size = new System.Drawing.Size(321, 39);
-            this.trWord.TabIndex = 15;
-            this.trWord.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.trWordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.trWordTextBox.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.trWordTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.trWordTextBox.HintForeColor = System.Drawing.Color.Empty;
+            this.trWordTextBox.HintText = "Türkçe kelimeyi giriniz";
+            this.trWordTextBox.isPassword = false;
+            this.trWordTextBox.LineFocusedColor = System.Drawing.Color.Blue;
+            this.trWordTextBox.LineIdleColor = System.Drawing.Color.Gray;
+            this.trWordTextBox.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.trWordTextBox.LineThickness = 3;
+            this.trWordTextBox.Location = new System.Drawing.Point(158, 162);
+            this.trWordTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.trWordTextBox.Name = "trWordTextBox";
+            this.trWordTextBox.Size = new System.Drawing.Size(241, 32);
+            this.trWordTextBox.TabIndex = 15;
+            this.trWordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // addWordButton
             // 
@@ -94,19 +94,21 @@
             this.addWordButton.IdleFillColor = System.Drawing.Color.White;
             this.addWordButton.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.addWordButton.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.addWordButton.Location = new System.Drawing.Point(211, 269);
-            this.addWordButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.addWordButton.Location = new System.Drawing.Point(158, 219);
+            this.addWordButton.Margin = new System.Windows.Forms.Padding(4);
             this.addWordButton.Name = "addWordButton";
-            this.addWordButton.Size = new System.Drawing.Size(321, 55);
+            this.addWordButton.Size = new System.Drawing.Size(241, 45);
             this.addWordButton.TabIndex = 19;
             this.addWordButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.addWordButton.Click += new System.EventHandler(this.AddWordButton_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(151, 197);
+            this.pictureBox1.Location = new System.Drawing.Point(113, 160);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(52, 42);
+            this.pictureBox1.Size = new System.Drawing.Size(39, 34);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
@@ -114,26 +116,27 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(151, 136);
+            this.pictureBox2.Location = new System.Drawing.Point(113, 110);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(52, 39);
+            this.pictureBox2.Size = new System.Drawing.Size(39, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
             // 
             // AddWord
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.addWordButton);
-            this.Controls.Add(this.trWord);
-            this.Controls.Add(this.userNameText);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Controls.Add(this.trWordTextBox);
+            this.Controls.Add(this.enWordTextBox);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddWord";
-            this.Size = new System.Drawing.Size(765, 487);
+            this.Size = new System.Drawing.Size(574, 396);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -142,8 +145,8 @@
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuMaterialTextbox userNameText;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox trWord;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox enWordTextBox;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox trWordTextBox;
         private Bunifu.Framework.UI.BunifuThinButton2 addWordButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;

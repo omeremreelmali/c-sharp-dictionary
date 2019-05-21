@@ -200,8 +200,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LearnWord";
             this.Size = new System.Drawing.Size(765, 487);
-            this.Load += new System.EventHandler(this.LearnWord_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton12)).EndInit();
+             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton13)).EndInit();
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuGradientPanel2.PerformLayout();

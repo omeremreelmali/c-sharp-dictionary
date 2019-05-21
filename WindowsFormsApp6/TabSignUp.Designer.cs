@@ -39,7 +39,7 @@
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.TabSignPageButton = new Bunifu.Framework.UI.BunifuThinButton2();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
@@ -58,10 +58,10 @@
             this.userNameText.LineIdleColor = System.Drawing.Color.Gray;
             this.userNameText.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.userNameText.LineThickness = 3;
-            this.userNameText.Location = new System.Drawing.Point(51, 44);
-            this.userNameText.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.userNameText.Location = new System.Drawing.Point(38, 36);
+            this.userNameText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userNameText.Name = "userNameText";
-            this.userNameText.Size = new System.Drawing.Size(333, 48);
+            this.userNameText.Size = new System.Drawing.Size(250, 39);
             this.userNameText.TabIndex = 8;
             this.userNameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -77,10 +77,10 @@
             this.nameText.LineIdleColor = System.Drawing.Color.Gray;
             this.nameText.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.nameText.LineThickness = 3;
-            this.nameText.Location = new System.Drawing.Point(51, 127);
-            this.nameText.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.nameText.Location = new System.Drawing.Point(38, 103);
+            this.nameText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nameText.Name = "nameText";
-            this.nameText.Size = new System.Drawing.Size(333, 48);
+            this.nameText.Size = new System.Drawing.Size(250, 39);
             this.nameText.TabIndex = 9;
             this.nameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -96,10 +96,10 @@
             this.mailText.LineIdleColor = System.Drawing.Color.Gray;
             this.mailText.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.mailText.LineThickness = 3;
-            this.mailText.Location = new System.Drawing.Point(51, 210);
-            this.mailText.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.mailText.Location = new System.Drawing.Point(38, 171);
+            this.mailText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mailText.Name = "mailText";
-            this.mailText.Size = new System.Drawing.Size(333, 48);
+            this.mailText.Size = new System.Drawing.Size(250, 39);
             this.mailText.TabIndex = 10;
             this.mailText.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -115,10 +115,10 @@
             this.passText.LineIdleColor = System.Drawing.Color.Gray;
             this.passText.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.passText.LineThickness = 3;
-            this.passText.Location = new System.Drawing.Point(51, 293);
-            this.passText.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.passText.Location = new System.Drawing.Point(38, 238);
+            this.passText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.passText.Name = "passText";
-            this.passText.Size = new System.Drawing.Size(333, 48);
+            this.passText.Size = new System.Drawing.Size(250, 39);
             this.passText.TabIndex = 11;
             this.passText.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.passText.OnValueChanged += new System.EventHandler(this.PassText_OnValueChanged);
@@ -141,10 +141,10 @@
             this.registerButton.IdleFillColor = System.Drawing.Color.White;
             this.registerButton.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.registerButton.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.registerButton.Location = new System.Drawing.Point(13, 385);
-            this.registerButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.registerButton.Location = new System.Drawing.Point(10, 313);
+            this.registerButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(371, 55);
+            this.registerButton.Size = new System.Drawing.Size(278, 45);
             this.registerButton.TabIndex = 12;
             this.registerButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.registerButton.Click += new System.EventHandler(this.RegisterButton_Click);
@@ -154,10 +154,10 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(13, 66);
-            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(10, 54);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(29, 25);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(22, 20);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 13;
             this.bunifuImageButton1.TabStop = false;
@@ -168,10 +168,10 @@
             this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
             this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(13, 150);
-            this.bunifuImageButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuImageButton2.Location = new System.Drawing.Point(10, 122);
+            this.bunifuImageButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(29, 25);
+            this.bunifuImageButton2.Size = new System.Drawing.Size(22, 20);
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton2.TabIndex = 14;
             this.bunifuImageButton2.TabStop = false;
@@ -182,10 +182,10 @@
             this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
             this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.Location = new System.Drawing.Point(13, 233);
-            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuImageButton3.Location = new System.Drawing.Point(10, 189);
+            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuImageButton3.Name = "bunifuImageButton3";
-            this.bunifuImageButton3.Size = new System.Drawing.Size(29, 25);
+            this.bunifuImageButton3.Size = new System.Drawing.Size(22, 20);
             this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton3.TabIndex = 15;
             this.bunifuImageButton3.TabStop = false;
@@ -196,10 +196,10 @@
             this.bunifuImageButton4.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton4.Image")));
             this.bunifuImageButton4.ImageActive = null;
-            this.bunifuImageButton4.Location = new System.Drawing.Point(13, 316);
-            this.bunifuImageButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuImageButton4.Location = new System.Drawing.Point(10, 257);
+            this.bunifuImageButton4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuImageButton4.Name = "bunifuImageButton4";
-            this.bunifuImageButton4.Size = new System.Drawing.Size(29, 25);
+            this.bunifuImageButton4.Size = new System.Drawing.Size(22, 20);
             this.bunifuImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton4.TabIndex = 16;
             this.bunifuImageButton4.TabStop = false;
@@ -209,45 +209,46 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(473, 153);
+            this.label1.Location = new System.Drawing.Point(355, 124);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(242, 38);
+            this.label1.Size = new System.Drawing.Size(188, 30);
             this.label1.TabIndex = 21;
             this.label1.Text = "Hesabınız var mı ?";
             // 
-            // bunifuThinButton22
+            // TabSignPageButton
             // 
-            this.bunifuThinButton22.ActiveBorderThickness = 1;
-            this.bunifuThinButton22.ActiveCornerRadius = 20;
-            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.BackColor = System.Drawing.Color.White;
-            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
-            this.bunifuThinButton22.ButtonText = "Giriş Yapın";
-            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton22.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.IdleBorderThickness = 1;
-            this.bunifuThinButton22.IdleCornerRadius = 20;
-            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(471, 194);
-            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(236, 46);
-            this.bunifuThinButton22.TabIndex = 20;
-            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton22.Click += new System.EventHandler(this.BunifuThinButton22_Click);
+            this.TabSignPageButton.ActiveBorderThickness = 1;
+            this.TabSignPageButton.ActiveCornerRadius = 20;
+            this.TabSignPageButton.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.TabSignPageButton.ActiveForecolor = System.Drawing.Color.White;
+            this.TabSignPageButton.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.TabSignPageButton.BackColor = System.Drawing.Color.White;
+            this.TabSignPageButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TabSignPageButton.BackgroundImage")));
+            this.TabSignPageButton.ButtonText = "Giriş Yapın";
+            this.TabSignPageButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TabSignPageButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TabSignPageButton.ForeColor = System.Drawing.Color.SeaGreen;
+            this.TabSignPageButton.IdleBorderThickness = 1;
+            this.TabSignPageButton.IdleCornerRadius = 20;
+            this.TabSignPageButton.IdleFillColor = System.Drawing.Color.White;
+            this.TabSignPageButton.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.TabSignPageButton.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.TabSignPageButton.Location = new System.Drawing.Point(353, 158);
+            this.TabSignPageButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TabSignPageButton.Name = "TabSignPageButton";
+            this.TabSignPageButton.Size = new System.Drawing.Size(177, 37);
+            this.TabSignPageButton.TabIndex = 20;
+            this.TabSignPageButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TabSignPageButton.Click += new System.EventHandler(this.TabSignPageButton_Click);
             // 
             // TabSignUp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.bunifuThinButton22);
+            this.Controls.Add(this.TabSignPageButton);
             this.Controls.Add(this.bunifuImageButton4);
             this.Controls.Add(this.bunifuImageButton3);
             this.Controls.Add(this.bunifuImageButton2);
@@ -257,9 +258,9 @@
             this.Controls.Add(this.mailText);
             this.Controls.Add(this.nameText);
             this.Controls.Add(this.userNameText);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "TabSignUp";
-            this.Size = new System.Drawing.Size(765, 487);
+            this.Size = new System.Drawing.Size(574, 396);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
@@ -280,6 +281,6 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton4;
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
+        private Bunifu.Framework.UI.BunifuThinButton2 TabSignPageButton;
     }
 }

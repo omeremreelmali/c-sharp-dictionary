@@ -22,9 +22,6 @@ namespace WindowsFormsApp6
             bunifuCustomLabel2.Visible = true;
         }
 
-        private void LearnWord_Load(object sender, EventArgs e)
-        {
-
-        }
+  
     }
 }

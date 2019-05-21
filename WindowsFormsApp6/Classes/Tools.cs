@@ -45,5 +45,50 @@ namespace WindowsFormsApp6.Classes
             mainConnect();
             return userName;
         }
+
+        public static void pageDirects(string page)
+        {
+            if (!Form1.Instance.PnlContainer.Controls.ContainsKey(page))
+            {
+                if ("AddWord"==page)
+                {
+                    AddWord aw = new AddWord();
+                    aw.Dock = DockStyle.Fill;
+                    Form1.Instance.PnlContainer.Controls.Add(aw);
+                }
+                if ("MainBase" == page)
+                {
+                    MainBase mb = new MainBase();
+                    mb.Dock = DockStyle.Fill;
+                    Form1.Instance.PnlContainer.Controls.Add(mb);
+                }
+                if ("LearnWord" == page)
+                {
+                    LearnWord ln = new LearnWord();
+                    ln.Dock = DockStyle.Fill;
+                    Form1.Instance.PnlContainer.Controls.Add(ln);
+                }
+                if ("Search" == page)
+                {
+                    Search sa = new Search();
+                    sa.Dock = DockStyle.Fill;
+                    Form1.Instance.PnlContainer.Controls.Add(sa);
+                }
+                if ("TabSignUp" == page)
+                {
+                    TabSignUp su = new TabSignUp();
+                    su.Dock = DockStyle.Fill;
+                    Form1.Instance.PnlContainer.Controls.Add(su);
+                }
+                if ("TabSign" == page)
+                {
+                    TabSign si = new TabSign();
+                    si.Dock = DockStyle.Fill;
+                    Form1.Instance.PnlContainer.Controls.Add(si);
+                }
+
+            }
+            Form1.Instance.PnlContainer.Controls[page].BringToFront();
+        }
     }
 }

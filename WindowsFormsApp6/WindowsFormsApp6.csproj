@@ -59,6 +59,7 @@
       <DependentUpon>AddWord.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Login.cs" />
+    <Compile Include="Classes\LoginUser.cs" />
     <Compile Include="Classes\MainDatabase.cs" />
     <Compile Include="Classes\Register.cs" />
     <Compile Include="Classes\Tools.cs" />
