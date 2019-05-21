@@ -13,6 +13,7 @@ namespace WindowsFormsApp6.Classes
     {
 
         UserWords uWords = new UserWords();
+        
         Tools appTools = new Tools();
         public bool wordAdd(int userID, string tr, string en)
         {
@@ -20,11 +21,9 @@ namespace WindowsFormsApp6.Classes
             try
             {
                 mainConnect();
-                MySqlCommand addWordCommand = new MySqlCommand("INSERT INTO word (user_id,tr_word,en_word) VALUES ('" + userID + "','" + tr + "','" + en + "')", mainDatabeseConn);
-                if (addWordCommand.ExecuteNonQuery().ToString() == "0")
-                {
-                    addResult = true;
-                }
+                MySqlCommand addWordCommand = new MySqlCommand("INSERT INTO words (user_id,tr_word,en_word) VALUES ('" + userID + "','" + tr + "','" + en + "')", mainDatabeseConn);
+                addWordCommand.ExecuteNonQuery();
+                addResult = true;
                 mainConnect();
             }
             catch (Exception e)
@@ -38,25 +37,40 @@ namespace WindowsFormsApp6.Classes
         public bool wordDelete(int wordID)
         {
             bool deleteResult = false;
-            mainConnect();
-            MySqlCommand deleteWordCommand = new MySqlCommand("DELETE FROM word WHERE id='" + wordID + "''", mainDatabeseConn);
-            if (deleteWordCommand.ExecuteNonQuery().ToString() == "0")
+            try
             {
+                mainConnect();
+                MySqlCommand deleteWordCommand = new MySqlCommand("DELETE FROM words WHERE id=" + wordID, mainDatabeseConn);
+                deleteWordCommand.ExecuteNonQuery();
                 deleteResult = true;
+                mainConnect();
             }
-            mainConnect();
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
             return deleteResult;
         }
+        
+
         public bool wordUpdate(int id, string tr, string en)
         {
             bool updateResult = false;
-            mainConnect();
-           /* MySqlCommand updateWordCommand = new MySqlCommand("DELETE FROM word WHERE id='" + wordID+ "''", mainDatabeseConn);
-            if (updateWordCommand.ExecuteNonQuery().ToString() == "0")
+            try
             {
+                mainConnect();
+                MySqlCommand updateWordCommand = new MySqlCommand("UPDATE words SET tr_word='"+tr+"', en_word='"+en+"' WHERE id=" + id, mainDatabeseConn);
+                updateWordCommand.ExecuteNonQuery();
                 updateResult = true;
-            }*/
-            mainConnect();
+                mainConnect();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+           
             return updateResult;
         }
         public ListView wordSearch(string comingWord,int user_id)
@@ -135,32 +149,27 @@ namespace WindowsFormsApp6.Classes
         {
             ListView searchListView = new ListView();
 
-            mainConnect();
-            MySqlCommand showWordCommand = new MySqlCommand("SELECT * from words order by RAND() LIMIT 100", mainDatabeseConn);
-            MySqlDataReader wordReader = showWordCommand.ExecuteReader();
-            while (wordReader.Read())
+            
+            for (int i = 0; i < wordsID.Count; i++)
             {
-                ListViewItem item = new ListViewItem(wordReader.GetString("id"));
-                item.SubItems.Add(wordReader.GetString("tr_word"));
-                item.SubItems.Add(wordReader.GetString("en_word"));
-                string username = appTools.userGetUserName(wordReader.GetString("user_id"));
-                item.SubItems.Add(username);
-                int level = uWords.userWordSearch(Convert.ToInt32(wordReader.GetString("id")), user_id);
-                if (level != 0)
+                mainConnect();
+                MySqlCommand showWordCommand = new MySqlCommand("SELECT * from words WHERE id="+wordsID[i], mainDatabeseConn);
+                MySqlDataReader wordReader = showWordCommand.ExecuteReader();
+                while (wordReader.Read())
                 {
+                    ListViewItem item = new ListViewItem(wordReader.GetString("id"));
+                    item.SubItems.Add(wordReader.GetString("tr_word"));
+                    item.SubItems.Add(wordReader.GetString("en_word"));
+                    string username = appTools.userGetUserName(wordReader.GetString("user_id"));
+                    item.SubItems.Add(username);
                     item.SubItems.Add("Var");
-                    item.SubItems.Add(level.ToString());
+                    item.SubItems.Add(wordsLevel[i].ToString());
+                    searchListView.Items.Add(item);
                 }
-                else
-                {
-                    item.SubItems.Add("Yok");
-                    item.SubItems.Add("0");
-                }
-
-                searchListView.Items.Add(item);
+                mainConnect();
             }
 
-            mainConnect();
+            
             return searchListView;
         }
 

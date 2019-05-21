@@ -82,75 +82,38 @@ namespace WindowsFormsApp6
             panel4.Visible = false;
         }
 
-        
-
         private void Form1_Load(object sender, EventArgs e)
         {
             _obj = this;
-            MainBase mb = new MainBase();
-            mb.Dock = DockStyle.Fill;
-            panelMain.Controls.Add(mb);
+            Classes.Tools.pageDirects("TabSign");
         }
 
-        private void BunifuImageButton2_Click(object sender, EventArgs e)
+        private void MainBaseButton_Click(object sender, EventArgs e)
         {
-            if(!Form1.Instance.PnlContainer.Controls.ContainsKey("LearnWord"))
-            {
-                LearnWord ln = new LearnWord();
-                ln.Dock = DockStyle.Fill;
-                Form1.Instance.PnlContainer.Controls.Add(ln);
-
-            }
-            Form1.Instance.PnlContainer.Controls["LearnWord"].BringToFront();
+            Classes.Tools.pageDirects("MainBase");
         }
 
-        private void BunifuImageButton3_Click(object sender, EventArgs e)
+        private void TabSignUpButton_Click(object sender, EventArgs e)
         {
-            if (!Form1.Instance.PnlContainer.Controls.ContainsKey("AddWord"))
-            {
-                AddWord aw = new AddWord();
-                aw.Dock = DockStyle.Fill;
-                Form1.Instance.PnlContainer.Controls.Add(aw);
-
-            }
-            Form1.Instance.PnlContainer.Controls["AddWord"].BringToFront();
+             Classes.Tools.pageDirects("TabSignUp");
         }
 
-        private void BunifuImageButton7_Click(object sender, EventArgs e)
+        private void SearchPageButton_Click(object sender, EventArgs e)
         {
-            if (!Form1.Instance.PnlContainer.Controls.ContainsKey("MainBase"))
-            {
-                MainBase mb = new MainBase();
-                mb.Dock = DockStyle.Fill;
-                Form1.Instance.PnlContainer.Controls.Add(mb);
-
-            }
-            Form1.Instance.PnlContainer.Controls["MainBase"].BringToFront();
+            Classes.Tools.pageDirects("Search");
         }
 
-        private void BunifuImageButton4_Click(object sender, EventArgs e)
+        private void AddWordPageButton_Click(object sender, EventArgs e)
         {
-            if (!Form1.Instance.PnlContainer.Controls.ContainsKey("Search"))
-            {
-                Search sa = new Search();
-                sa.Dock = DockStyle.Fill;
-                Form1.Instance.PnlContainer.Controls.Add(sa);
-
-            }
-            Form1.Instance.PnlContainer.Controls["Search"].BringToFront();
+            Classes.Tools.pageDirects("AddWord");
         }
 
-        private void BunifuImageButton5_Click(object sender, EventArgs e)
+        private void LearnWordPageButton_Click(object sender, EventArgs e)
         {
-            if (!Form1.Instance.PnlContainer.Controls.ContainsKey("TabSignUp"))
-            {
-                TabSignUp su = new TabSignUp();
-                su.Dock = DockStyle.Fill;
-                Form1.Instance.PnlContainer.Controls.Add(su);
-
-            }
-            Form1.Instance.PnlContainer.Controls["TabSignUp"].BringToFront();
+            Classes.Tools.pageDirects("LearnWord");
         }
+
+   
     }
  }
 

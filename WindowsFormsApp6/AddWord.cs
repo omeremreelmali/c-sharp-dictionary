@@ -16,5 +16,26 @@ namespace WindowsFormsApp6
         {
             InitializeComponent();
         }
+        Classes.Words wordOperation = new Classes.Words();
+
+        private void AddWordButton_Click(object sender, EventArgs e)
+        {
+            bool result = false;
+            if (Classes.LoginUser.userlogin)
+            {
+                result = wordOperation.wordAdd(Convert.ToInt32(Classes.LoginUser.userID), trWordTextBox.Text, enWordTextBox.Text);
+                if (result == true)
+                {
+                    MessageBox.Show("Kelime başarıyla kayıt edildi.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("İşlem yapmadan önce lütfen giriş yapınız.");
+            }
+            
+        }
+
+        
     }
 }

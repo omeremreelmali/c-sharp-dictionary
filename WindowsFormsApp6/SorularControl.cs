@@ -41,5 +41,7 @@ namespace WindowsFormsApp6
         {
             label1.Text = "Doğru Cevapladınız..";
         }
+
+      
     }
 }

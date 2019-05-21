@@ -20,17 +20,7 @@ namespace WindowsFormsApp6
 
         }
 
-        private void BunifuThinButton22_Click(object sender, EventArgs e)
-        {
-            if (!Form1.Instance.PnlContainer.Controls.ContainsKey("TabSign"))
-            {
-                TabSign si = new TabSign();
-                si.Dock = DockStyle.Fill;
-                Form1.Instance.PnlContainer.Controls.Add(si);
-
-            }
-            Form1.Instance.PnlContainer.Controls["TabSign"].BringToFront();
-        }
+      
 
         int placeHolderCounter = 0;
         private void PassText_OnValueChanged(object sender, EventArgs e)
@@ -59,6 +49,11 @@ namespace WindowsFormsApp6
             {
                 MessageBox.Show("Kayıt sırasında bir sıkıntı oluştu");
             }
+        }
+
+        private void TabSignPageButton_Click(object sender, EventArgs e)
+        {
+            Classes.Tools.pageDirects("TabSign"); 
         }
     }
 }
