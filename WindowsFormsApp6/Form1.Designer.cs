@@ -189,7 +189,7 @@
             this.bunifuGradientPanel2.Quality = 10;
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(64, 396);
             this.bunifuGradientPanel2.TabIndex = 1;
-            // 
+             // 
             // MainBaseButton
             // 
             this.MainBaseButton.BackColor = System.Drawing.Color.Transparent;
@@ -329,7 +329,7 @@
             this.panelMain.Quality = 10;
             this.panelMain.Size = new System.Drawing.Size(574, 396);
             this.panelMain.TabIndex = 3;
-            // 
+             // 
             // bunifuDragControl2
             // 
             this.bunifuDragControl2.Fixed = true;

@@ -14,34 +14,44 @@ namespace WindowsFormsApp6.Classes
         public string[] userLogin(string userName, string pass)
         {
             string[] user = new string[3];
-            Tools appTool = new Tools();
-            pass=appTool.MD5Convert(pass);
-            int userLoginCount = 0;
-            mainConnect();
-            MySqlCommand userLoginCommand = new MySqlCommand("SELECT * from users WHERE username='" + userName +"' ", mainDatabeseConn);
-            MySqlDataReader reader = userLoginCommand.ExecuteReader();
-            while (reader.Read())
+            try
             {
-                if (reader.GetString("pass")==pass)
+               
+                Tools appTool = new Tools();
+                pass = appTool.MD5Convert(pass);
+                int userLoginCount = 0;
+                mainConnect();
+                MySqlCommand userLoginCommand = new MySqlCommand("SELECT * from users WHERE username='" + userName + "' ", mainDatabeseConn);
+                MySqlDataReader reader = userLoginCommand.ExecuteReader();
+                while (reader.Read())
                 {
-                    
-                    user[0] = reader.GetString("id");
-                    user[1] = reader.GetString("name");
-                    user[2] = reader.GetString("username");
-                }
-                else
-                {
-                    user[0] = "PAROLA_HATASI";
-                }
-                userLoginCount++;
-            }
+                    if (reader.GetString("pass") == pass)
+                    {
 
-            if (userLoginCount != 1)
+                        user[0] = reader.GetString("id");
+                        user[1] = reader.GetString("name");
+                        user[2] = reader.GetString("username");
+                    }
+                    else
+                    {
+                        user[0] = "PAROLA_HATASI";
+                    }
+                    userLoginCount++;
+                }
+
+                if (userLoginCount != 1)
+                {
+                    user = null;
+                }
+
+                mainConnect();
+            }
+            catch (Exception)
             {
-                user = null;
+                MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                mainConnect();
             }
-
-            mainConnect();
+            
             return user;
         }
     }

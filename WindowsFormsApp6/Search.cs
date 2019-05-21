@@ -54,7 +54,7 @@ namespace WindowsFormsApp6
         void randomList()
         {
             ListView searchResult = new ListView();
-            searchResult = wordsOperations.showWords(1);
+            searchResult = wordsOperations.showWords(Convert.ToInt32(Classes.LoginUser.userID),100);
             wordList(searchResult, searchResult.Items.Count);
         }
         void wordList(ListView listListview, int itemCount)

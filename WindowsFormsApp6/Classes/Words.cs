@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data;
@@ -28,7 +29,8 @@ namespace WindowsFormsApp6.Classes
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.ToString());
+                MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                mainConnect();
             }
 
             return addResult;
@@ -45,12 +47,12 @@ namespace WindowsFormsApp6.Classes
                 deleteResult = true;
                 mainConnect();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
-                throw;
+                MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                mainConnect();
             }
-            
+
             return deleteResult;
         }
         
@@ -66,11 +68,12 @@ namespace WindowsFormsApp6.Classes
                 updateResult = true;
                 mainConnect();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                mainConnect();
             }
-           
+
             return updateResult;
         }
         public ListView wordSearch(string comingWord,int user_id)
@@ -112,36 +115,44 @@ namespace WindowsFormsApp6.Classes
             mainConnect();
             return searchListView;
         }
-        public ListView showWords(int user_id)
+        public ListView showWords(int user_id,int randomLimit)
         {
             ListView searchListView = new ListView();
-            
-            mainConnect();
-            MySqlCommand showWordCommand = new MySqlCommand("SELECT * from words order by RAND() LIMIT 100", mainDatabeseConn);
-            MySqlDataReader wordReader = showWordCommand.ExecuteReader();
-            while (wordReader.Read())
+            try
             {
-                ListViewItem item = new ListViewItem(wordReader.GetString("id"));
-                item.SubItems.Add(wordReader.GetString("tr_word"));
-                item.SubItems.Add(wordReader.GetString("en_word"));
-                string username = appTools.userGetUserName(wordReader.GetString("user_id"));
-                item.SubItems.Add(username);
-                int level = uWords.userWordSearch(Convert.ToInt32(wordReader.GetString("id")), user_id);
-                if (level!=0)
+                mainConnect();
+                MySqlCommand showWordCommand = new MySqlCommand("SELECT * from words order by RAND() LIMIT " + randomLimit, mainDatabeseConn);
+                MySqlDataReader wordReader = showWordCommand.ExecuteReader();
+                while (wordReader.Read())
                 {
-                    item.SubItems.Add("Var");
-                    item.SubItems.Add(level.ToString());
-                }
-                else
-                {
-                    item.SubItems.Add("Yok");
-                    item.SubItems.Add("0");
+                    ListViewItem item = new ListViewItem(wordReader.GetString("id"));
+                    item.SubItems.Add(wordReader.GetString("tr_word"));
+                    item.SubItems.Add(wordReader.GetString("en_word"));
+                    string username = appTools.userGetUserName(wordReader.GetString("user_id"));
+                    item.SubItems.Add(username);
+                    int level = uWords.userWordSearch(Convert.ToInt32(wordReader.GetString("id")), user_id);
+                    if (level != 0)
+                    {
+                        item.SubItems.Add("Var");
+                        item.SubItems.Add(level.ToString());
+                    }
+                    else
+                    {
+                        item.SubItems.Add("Yok");
+                        item.SubItems.Add("0");
+                    }
+
+                    searchListView.Items.Add(item);
                 }
 
-                searchListView.Items.Add(item);
+                mainConnect();
             }
-
-            mainConnect();
+            catch (Exception e)
+            {
+                MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                mainConnect();
+            }
+            
             return searchListView;
         }
 
@@ -152,25 +163,91 @@ namespace WindowsFormsApp6.Classes
             
             for (int i = 0; i < wordsID.Count; i++)
             {
-                mainConnect();
-                MySqlCommand showWordCommand = new MySqlCommand("SELECT * from words WHERE id="+wordsID[i], mainDatabeseConn);
-                MySqlDataReader wordReader = showWordCommand.ExecuteReader();
-                while (wordReader.Read())
+                
+                try
                 {
-                    ListViewItem item = new ListViewItem(wordReader.GetString("id"));
-                    item.SubItems.Add(wordReader.GetString("tr_word"));
-                    item.SubItems.Add(wordReader.GetString("en_word"));
-                    string username = appTools.userGetUserName(wordReader.GetString("user_id"));
-                    item.SubItems.Add(username);
-                    item.SubItems.Add("Var");
-                    item.SubItems.Add(wordsLevel[i].ToString());
-                    searchListView.Items.Add(item);
+                    mainConnect();
+                    MySqlCommand showWordCommand = new MySqlCommand("SELECT * from words WHERE id=" + wordsID[i], mainDatabeseConn);
+                    MySqlDataReader wordReader = showWordCommand.ExecuteReader();
+                    while (wordReader.Read())
+                    {
+                        ListViewItem item = new ListViewItem(wordReader.GetString("id"));
+                        item.SubItems.Add(wordReader.GetString("tr_word"));
+                        item.SubItems.Add(wordReader.GetString("en_word"));
+                        string username = appTools.userGetUserName(wordReader.GetString("user_id"));
+                        item.SubItems.Add(username);
+                        item.SubItems.Add("Var");
+                        item.SubItems.Add(wordsLevel[i].ToString());
+                        searchListView.Items.Add(item);
+                    }
+                    mainConnect();
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                    mainConnect();
+                }
+
+
+            }
+
+            return searchListView;
+        }
+
+        public int getCountWords()
+        {
+            int count=0;
+            try
+            {
+                mainConnect();
+                DataSet datasetCount = new DataSet();
+                MySqlDataAdapter getCountWordAdapter = new MySqlDataAdapter("SELECT * from words", mainDatabeseConn);
+                getCountWordAdapter.Fill(datasetCount, "words");
+                count = datasetCount.Tables["words"].Rows.Count;
+                mainConnect();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                mainConnect();
+            }
+            return count;
+        }
+
+        public string[] getWord(int islem,int randID)
+        {
+            string[] word = new string[2];
+            if (islem==1)
+            {
+                Random rnd = new Random();
+                randID = rnd.Next(0, getCountWords());
+            }
+            
+            try
+            {
+                int wordC = 0;
+                mainConnect();
+                MySqlCommand showWordCommand = new MySqlCommand("SELECT * from words WHERE id="+ randID , mainDatabeseConn);
+                MySqlDataReader wordReader = showWordCommand.ExecuteReader();
+                while(wordReader.Read())
+                {
+                    word[0] = wordReader.GetString("tr_word");
+                    word[1] = wordReader.GetString("en_word");
+                    wordC++;
+                }
+                if (wordC==0)
+                {
+                    getWord(1,1);
                 }
                 mainConnect();
             }
+            catch (Exception e)
+            {
+                MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                mainConnect();
+            }
 
-            
-            return searchListView;
+            return word;
         }
 
     }
