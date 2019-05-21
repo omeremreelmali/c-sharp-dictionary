@@ -23,6 +23,7 @@ namespace WindowsFormsApp6
         {
             Classes.Login lgn = new Classes.Login();
             
+            
             string[] user = lgn.userLogin(userNameText.Text, passText.Text);
             if (user == null)
             {
@@ -39,6 +40,9 @@ namespace WindowsFormsApp6
                 Classes.LoginUser.userID = user[0];
                 Classes.LoginUser.userRealName = user[1];
                 Classes.LoginUser.userName = user[2];
+                Classes.Tools.pageDirects("Statistics");
+                
+
             }
 
 

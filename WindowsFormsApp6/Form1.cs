@@ -16,6 +16,7 @@ namespace WindowsFormsApp6
 
         public static Form1 Instance
         {
+
             get
             {
                 if (_obj == null)
@@ -33,10 +34,9 @@ namespace WindowsFormsApp6
         }
 
         public Form1()
-        {
+        {    
             InitializeComponent();
         }
-
         private void BunifuImageButton1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -57,10 +57,7 @@ namespace WindowsFormsApp6
             panel3.Visible = true;
         }
 
-        private void BunifuImageButton5_MouseEnter(object sender, EventArgs e)
-        {
-            panel4.Visible = true;
-        }
+       
 
         private void BunifuImageButton2_MouseLeave(object sender, EventArgs e)
         {
@@ -77,15 +74,14 @@ namespace WindowsFormsApp6
             panel3.Visible = false;
         }
 
-        private void BunifuImageButton5_MouseLeave(object sender, EventArgs e)
-        {
-            panel4.Visible = false;
-        }
+       
 
         private void Form1_Load(object sender, EventArgs e)
         {
             _obj = this;
             Classes.Tools.pageDirects("TabSign");
+            loginTimer.Start();
+
         }
 
         private void MainBaseButton_Click(object sender, EventArgs e)
@@ -113,7 +109,34 @@ namespace WindowsFormsApp6
             Classes.Tools.pageDirects("LearnWord");
         }
 
-   
+        private void LoginTimer_Tick(object sender, EventArgs e)
+        {
+            if (Classes.LoginUser.userID == null)
+            {
+                bunifuGradientPanel2.Visible = false;
+            }
+            else
+            {
+                bunifuGradientPanel2.Visible = true;
+                
+                loginTimer.Stop();
+            }
+        }
+
+        private void BunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            Classes.Tools.pageDirects("Statistics");
+        }
+
+        private void BunifuImageButton2_MouseEnter_1(object sender, EventArgs e)
+        {
+            panel4.Visible = true;
+        }
+
+        private void BunifuImageButton2_MouseLeave_1(object sender, EventArgs e)
+        {
+            panel4.Visible = false;
+        }
     }
  }
 

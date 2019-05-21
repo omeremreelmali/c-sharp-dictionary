@@ -41,6 +41,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -92,11 +93,17 @@
     <Compile Include="Search.Designer.cs">
       <DependentUpon>Search.cs</DependentUpon>
     </Compile>
-    <Compile Include="SorularControl.cs">
+    <Compile Include="QuizPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SorularControl.Designer.cs">
-      <DependentUpon>SorularControl.cs</DependentUpon>
+    <Compile Include="QuizPage.Designer.cs">
+      <DependentUpon>QuizPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Statistics.Designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
     </Compile>
     <Compile Include="TabSign.cs">
       <SubType>UserControl</SubType>
@@ -134,8 +141,11 @@
     <EmbeddedResource Include="Search.resx">
       <DependentUpon>Search.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SorularControl.resx">
-      <DependentUpon>SorularControl.cs</DependentUpon>
+    <EmbeddedResource Include="QuizPage.resx">
+      <DependentUpon>QuizPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TabSign.resx">
       <DependentUpon>TabSign.cs</DependentUpon>

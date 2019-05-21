@@ -20,19 +20,27 @@ namespace WindowsFormsApp6
 
         private void AddWordButton_Click(object sender, EventArgs e)
         {
-            bool result = false;
-            if (Classes.LoginUser.userlogin)
+            if (trWordTextBox.Text!=null&& enWordTextBox!=null && wordTypeCombo!= null )
             {
-                result = wordOperation.wordAdd(Convert.ToInt32(Classes.LoginUser.userID), trWordTextBox.Text, enWordTextBox.Text);
-                if (result == true)
+                bool result = false;
+                if (Classes.LoginUser.userlogin)
                 {
-                    MessageBox.Show("Kelime başarıyla kayıt edildi.");
+                    result = wordOperation.wordAdd(Convert.ToInt32(Classes.LoginUser.userID), trWordTextBox.Text, enWordTextBox.Text, wordTypeCombo.Text);
+                    if (result == true)
+                    {
+                        MessageBox.Show("Kelime başarıyla kayıt edildi.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("İşlem yapmadan önce lütfen giriş yapınız.");
                 }
             }
             else
             {
-                MessageBox.Show("İşlem yapmadan önce lütfen giriş yapınız.");
+                MessageBox.Show("Lütfen Boş Bırakmayınız");
             }
+            
             
         }
 
