@@ -19,10 +19,11 @@ namespace WindowsFormsApp6
 
         public LearnWord()
         {
+            
+
             InitializeComponent();
         }
 
-        
 
         private void LearnWord_Load(object sender, EventArgs e)
         {

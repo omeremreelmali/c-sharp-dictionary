@@ -29,12 +29,12 @@ namespace WindowsFormsApp6.Classes
                 MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
                 userWordConnect();
             }
-            
-            
+
+
             return tableCreateResult;
         }
 
-        public bool userWordAdd(int userID,int wordID)
+        public bool userWordAdd(int userID, int wordID)
         {
             bool addResult = false;
             try
@@ -42,21 +42,21 @@ namespace WindowsFormsApp6.Classes
                 userWordConnect();
                 DateTime getTime = DateTime.Now;
                 string time = getTime.Year + "." + getTime.Month + "." + getTime.Day;
-                MySqlCommand addWordCommand = new MySqlCommand("INSERT INTO words_"+userID+ " (word_id,level,first_date) VALUES ('" + wordID + "','" + 1 + "','" + time + "')", userWordConnection);
+                MySqlCommand addWordCommand = new MySqlCommand("INSERT INTO words_" + userID + " (word_id,level,first_date) VALUES ('" + wordID + "','" + 1 + "','" + time + "')", userWordConnection);
                 addWordCommand.ExecuteNonQuery();
                 addResult = true;
-                userWordConnect(); 
+                userWordConnect();
             }
             catch (Exception e)
             {
-                MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                MessageBox.Show("İşlem sırasında bir hata meydana geldi." + e);
                 userWordConnect();
             }
 
             return addResult;
         }
 
-        public bool userWordUpdate(int userID, int wordID,int level)
+        public bool userWordUpdate(int userID, int wordID, int level)
         {
             bool addResult = false;
             try
@@ -64,33 +64,33 @@ namespace WindowsFormsApp6.Classes
                 userWordConnect();
                 DateTime getTime = DateTime.Now;
                 string time = getTime.Year + "." + getTime.Month + "." + getTime.Day;
-                MySqlCommand updateWordCommand = new MySqlCommand("UPDATE words_"+userID+" SET level='" + level + "', first_date='" + time + "' WHERE word_id=" + wordID, userWordConnection);
+                MySqlCommand updateWordCommand = new MySqlCommand("UPDATE words_" + userID + " SET level='" + level + "', first_date='" + time + "' WHERE word_id=" + wordID, userWordConnection);
                 updateWordCommand.ExecuteNonQuery();
                 addResult = true;
                 userWordConnect();
             }
             catch (Exception e)
             {
-                MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                MessageBox.Show("İşlem sırasında bir hata meydana geldi." + e);
                 userWordConnect();
             }
 
             return addResult;
         }
-        public bool userWordDelete(int userID,int wordID)
+        public bool userWordDelete(int userID, int wordID)
         {
             bool deleteResult = false;
             try
             {
                 userWordConnect();
-                MySqlCommand deleteWordCommand = new MySqlCommand("DELETE FROM words_"+userID+" WHERE word_id=" + wordID , userWordConnection);
+                MySqlCommand deleteWordCommand = new MySqlCommand("DELETE FROM words_" + userID + " WHERE word_id=" + wordID, userWordConnection);
                 deleteWordCommand.ExecuteNonQuery();
                 deleteResult = true;
                 userWordConnect();
             }
             catch (Exception e)
             {
-                MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                MessageBox.Show("İşlem sırasında bir hata meydana geldi." + e);
                 userWordConnect();
             }
 
@@ -112,10 +112,10 @@ namespace WindowsFormsApp6.Classes
             }
             catch (Exception e)
             {
-                MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                MessageBox.Show("İşlem sırasında bir hata meydana geldi." + e);
                 userWordConnect();
             }
-            
+
             return wordLevel;
         }
 
@@ -130,14 +130,14 @@ namespace WindowsFormsApp6.Classes
                 MySqlDataReader reader = listUserWordsCommand.ExecuteReader();
                 while (reader.Read())
                 {
-                    if (reader.GetInt32("level")==6)
+                    if (reader.GetInt32("level") == 6)
                     {
                         learnedWord++;
                     }
                     words++;
                 }
 
-                if (learnedWord!=0)
+                if (learnedWord != 0)
                 {
                     learnedWordsStatic = (learnedWord * 100) / words;
                 }
@@ -145,13 +145,13 @@ namespace WindowsFormsApp6.Classes
                 {
                     learnedWordsStatic = 0;
                 }
-                
+
                 userWordConnect();
-                
+
             }
             catch (Exception e)
             {
-                MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                MessageBox.Show("İşlem sırasında bir hata meydana geldi." + e);
                 userWordConnect();
             }
             return learnedWordsStatic;
@@ -161,7 +161,7 @@ namespace WindowsFormsApp6.Classes
         {
             ListView myWords = new ListView();
             List<int> myWordsLevel = new List<int>();
-            List <int> myWordsID = new List<int>();
+            List<int> myWordsID = new List<int>();
             try
             {
                 userWordConnect();
@@ -185,10 +185,10 @@ namespace WindowsFormsApp6.Classes
             }
             catch (Exception e)
             {
-                MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                MessageBox.Show("İşlem sırasında bir hata meydana geldi." + e);
                 userWordConnect();
             }
-            
+
 
             return myWords;
         }
@@ -199,7 +199,7 @@ namespace WindowsFormsApp6.Classes
             List<string>[] myWords = new List<string>[4];
             List<string> wordsID = new List<string>();
             List<string> wordsLevel = new List<string>();
-            List<string> wordsTR= new List<string>();
+            List<string> wordsTR = new List<string>();
             List<string> wordsEN = new List<string>();
             try
             {
@@ -234,17 +234,17 @@ namespace WindowsFormsApp6.Classes
             }
             catch (Exception e)
             {
-                MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                MessageBox.Show("İşlem sırasında bir hata meydana geldi." + e);
                 userWordConnect();
             }
 
             return myWords;
         }
-        
+
         public int levelDay(int level)
         {
             int day = 0; ;
-            if (level==1)
+            if (level == 1)
             {
                 day = 1;
             }
@@ -268,6 +268,31 @@ namespace WindowsFormsApp6.Classes
         }
 
 
+
+        public ListView statisticList(int userID)
+        {
+            ListView myWords = new ListView();
+            try
+            {
+                userWordConnect();
+                MySqlCommand listUserWordsCommand = new MySqlCommand("Select * from words_" + userID + " ORDER BY first_date ASC", userWordConnection);
+                MySqlDataReader reader = listUserWordsCommand.ExecuteReader();
+                while (reader.Read())
+                {
+                    ListViewItem item = new ListViewItem(reader.GetString("level"));
+                    item.SubItems.Add(reader.GetString("first_date"));
+                    myWords.Items.Add(item);
+                }
+                userWordConnect();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("İşlem sırasında bir hata meydana geldi." + e);
+                userWordConnect();
+            }
+            return myWords;
+        }
+
     }
-    
 }

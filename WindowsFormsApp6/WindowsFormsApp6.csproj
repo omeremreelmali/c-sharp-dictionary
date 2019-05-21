@@ -41,6 +41,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -98,6 +99,12 @@
     <Compile Include="QuizPage.Designer.cs">
       <DependentUpon>QuizPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Statistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Statistics.Designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </Compile>
     <Compile Include="TabSign.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuizPage.resx">
       <DependentUpon>QuizPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TabSign.resx">
       <DependentUpon>TabSign.cs</DependentUpon>

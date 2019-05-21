@@ -16,20 +16,20 @@ namespace WindowsFormsApp6.Classes
         UserWords uWords = new UserWords();
         
         Tools appTools = new Tools();
-        public bool wordAdd(int userID, string tr, string en)
+        public bool wordAdd(int userID, string tr, string en,string wordType)
         {
             bool addResult = false;
             try
             {
                 mainConnect();
-                MySqlCommand addWordCommand = new MySqlCommand("INSERT INTO words (user_id,tr_word,en_word) VALUES ('" + userID + "','" + tr + "','" + en + "')", mainDatabeseConn);
+                MySqlCommand addWordCommand = new MySqlCommand("INSERT INTO words (user_id,tr_word,en_word,wordType) VALUES ('" + userID + "','" + tr + "','" + en + "','" + wordType + "')", mainDatabeseConn);
                 addWordCommand.ExecuteNonQuery();
                 addResult = true;
                 mainConnect();
             }
             catch (Exception e)
             {
-                MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                MessageBox.Show("İşlem sırasında bir hata meydana geldi." + e);
                 mainConnect();
             }
 
@@ -49,7 +49,7 @@ namespace WindowsFormsApp6.Classes
             }
             catch (Exception e)
             {
-                MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                MessageBox.Show("İşlem sırasında bir hata meydana geldi." + e);
                 mainConnect();
             }
 
@@ -70,7 +70,7 @@ namespace WindowsFormsApp6.Classes
             }
             catch (Exception e)
             {
-                MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                MessageBox.Show("İşlem sırasında bir hata meydana geldi." + e);
                 mainConnect();
             }
 
@@ -149,7 +149,7 @@ namespace WindowsFormsApp6.Classes
             }
             catch (Exception e)
             {
-                MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                MessageBox.Show("İşlem sırasında bir hata meydana geldi." + e);
                 mainConnect();
             }
             
@@ -184,7 +184,7 @@ namespace WindowsFormsApp6.Classes
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                    MessageBox.Show("İşlem sırasında bir hata meydana geldi." + e);
                     mainConnect();
                 }
 
@@ -208,7 +208,7 @@ namespace WindowsFormsApp6.Classes
             }
             catch (Exception e)
             {
-                MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                MessageBox.Show("İşlem sırasında bir hata meydana geldi." + e);
                 mainConnect();
             }
             return count;
@@ -243,7 +243,7 @@ namespace WindowsFormsApp6.Classes
             }
             catch (Exception e)
             {
-                MessageBox.Show("İşlem sırasında bir hata meydana geldi.");
+                MessageBox.Show("İşlem sırasında bir hata meydana geldi." + e);
                 mainConnect();
             }
 

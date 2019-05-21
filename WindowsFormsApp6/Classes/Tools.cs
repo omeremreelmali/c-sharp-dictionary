@@ -113,8 +113,15 @@ namespace WindowsFormsApp6.Classes
                     qp.Dock = DockStyle.Fill;
                     Form1.Instance.PnlContainer.Controls.Add(qp);
                 }
+                if ("Statistics" == page)
+                {
+                    Statistics st = new Statistics();
+                    st.Dock = DockStyle.Fill;
+                    Form1.Instance.PnlContainer.Controls.Add(st);
+                }
 
             }
+            
             Form1.Instance.PnlContainer.Controls[page].BringToFront();
         }
     }

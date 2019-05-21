@@ -34,6 +34,7 @@
             this.addWordButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.wordTypeCombo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -50,10 +51,10 @@
             this.enWordTextBox.LineIdleColor = System.Drawing.Color.Gray;
             this.enWordTextBox.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.enWordTextBox.LineThickness = 3;
-            this.enWordTextBox.Location = new System.Drawing.Point(158, 110);
-            this.enWordTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.enWordTextBox.Location = new System.Drawing.Point(204, 116);
+            this.enWordTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.enWordTextBox.Name = "enWordTextBox";
-            this.enWordTextBox.Size = new System.Drawing.Size(241, 32);
+            this.enWordTextBox.Size = new System.Drawing.Size(321, 39);
             this.enWordTextBox.TabIndex = 14;
             this.enWordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -69,10 +70,10 @@
             this.trWordTextBox.LineIdleColor = System.Drawing.Color.Gray;
             this.trWordTextBox.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.trWordTextBox.LineThickness = 3;
-            this.trWordTextBox.Location = new System.Drawing.Point(158, 162);
-            this.trWordTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.trWordTextBox.Location = new System.Drawing.Point(204, 180);
+            this.trWordTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.trWordTextBox.Name = "trWordTextBox";
-            this.trWordTextBox.Size = new System.Drawing.Size(241, 32);
+            this.trWordTextBox.Size = new System.Drawing.Size(321, 39);
             this.trWordTextBox.TabIndex = 15;
             this.trWordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -94,10 +95,10 @@
             this.addWordButton.IdleFillColor = System.Drawing.Color.White;
             this.addWordButton.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.addWordButton.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.addWordButton.Location = new System.Drawing.Point(158, 219);
-            this.addWordButton.Margin = new System.Windows.Forms.Padding(4);
+            this.addWordButton.Location = new System.Drawing.Point(144, 302);
+            this.addWordButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.addWordButton.Name = "addWordButton";
-            this.addWordButton.Size = new System.Drawing.Size(241, 45);
+            this.addWordButton.Size = new System.Drawing.Size(381, 55);
             this.addWordButton.TabIndex = 19;
             this.addWordButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.addWordButton.Click += new System.EventHandler(this.AddWordButton_Click);
@@ -105,10 +106,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(113, 160);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(144, 178);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 34);
+            this.pictureBox1.Size = new System.Drawing.Size(52, 42);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
@@ -116,27 +117,40 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(113, 110);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(144, 116);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(39, 32);
+            this.pictureBox2.Size = new System.Drawing.Size(52, 39);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
             // 
+            // wordTypeCombo
+            // 
+            this.wordTypeCombo.FormattingEnabled = true;
+            this.wordTypeCombo.Items.AddRange(new object[] {
+            "İsim",
+            "Sıfat",
+            "Fiil"});
+            this.wordTypeCombo.Location = new System.Drawing.Point(144, 248);
+            this.wordTypeCombo.Name = "wordTypeCombo";
+            this.wordTypeCombo.Size = new System.Drawing.Size(381, 24);
+            this.wordTypeCombo.TabIndex = 22;
+            // 
             // AddWord
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.wordTypeCombo);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.addWordButton);
             this.Controls.Add(this.trWordTextBox);
             this.Controls.Add(this.enWordTextBox);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AddWord";
-            this.Size = new System.Drawing.Size(574, 396);
+            this.Size = new System.Drawing.Size(765, 487);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -150,5 +164,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 addWordButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ComboBox wordTypeCombo;
     }
 }

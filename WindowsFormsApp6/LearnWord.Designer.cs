@@ -50,10 +50,10 @@
             this.nextWordButton.BackColor = System.Drawing.Color.Transparent;
             this.nextWordButton.Image = ((System.Drawing.Image)(resources.GetObject("nextWordButton.Image")));
             this.nextWordButton.ImageActive = null;
-            this.nextWordButton.Location = new System.Drawing.Point(177, 240);
-            this.nextWordButton.Margin = new System.Windows.Forms.Padding(2);
+            this.nextWordButton.Location = new System.Drawing.Point(206, 296);
+            this.nextWordButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nextWordButton.Name = "nextWordButton";
-            this.nextWordButton.Size = new System.Drawing.Size(67, 58);
+            this.nextWordButton.Size = new System.Drawing.Size(89, 71);
             this.nextWordButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.nextWordButton.TabIndex = 36;
             this.nextWordButton.TabStop = false;
@@ -65,10 +65,10 @@
             this.previousWordButton.BackColor = System.Drawing.Color.Transparent;
             this.previousWordButton.Image = ((System.Drawing.Image)(resources.GetObject("previousWordButton.Image")));
             this.previousWordButton.ImageActive = null;
-            this.previousWordButton.Location = new System.Drawing.Point(107, 240);
-            this.previousWordButton.Margin = new System.Windows.Forms.Padding(2);
+            this.previousWordButton.Location = new System.Drawing.Point(113, 296);
+            this.previousWordButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.previousWordButton.Name = "previousWordButton";
-            this.previousWordButton.Size = new System.Drawing.Size(65, 58);
+            this.previousWordButton.Size = new System.Drawing.Size(87, 71);
             this.previousWordButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.previousWordButton.TabIndex = 35;
             this.previousWordButton.TabStop = false;
@@ -80,10 +80,9 @@
             this.enWordLabel.AutoSize = true;
             this.enWordLabel.BackColor = System.Drawing.Color.Transparent;
             this.enWordLabel.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.enWordLabel.Location = new System.Drawing.Point(132, 58);
-            this.enWordLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.enWordLabel.Location = new System.Drawing.Point(119, 64);
             this.enWordLabel.Name = "enWordLabel";
-            this.enWordLabel.Size = new System.Drawing.Size(80, 37);
+            this.enWordLabel.Size = new System.Drawing.Size(95, 45);
             this.enWordLabel.TabIndex = 32;
             this.enWordLabel.Text = "Hello";
             this.enWordLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -106,10 +105,10 @@
             this.showWordButton.IdleFillColor = System.Drawing.Color.White;
             this.showWordButton.IdleForecolor = System.Drawing.Color.Purple;
             this.showWordButton.IdleLineColor = System.Drawing.Color.Violet;
-            this.showWordButton.Location = new System.Drawing.Point(122, 108);
-            this.showWordButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.showWordButton.Location = new System.Drawing.Point(127, 133);
+            this.showWordButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.showWordButton.Name = "showWordButton";
-            this.showWordButton.Size = new System.Drawing.Size(101, 45);
+            this.showWordButton.Size = new System.Drawing.Size(135, 55);
             this.showWordButton.TabIndex = 34;
             this.showWordButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.showWordButton.Click += new System.EventHandler(this.ShowWordButton_Click);
@@ -119,10 +118,9 @@
             this.trWordLabel.AutoSize = true;
             this.trWordLabel.BackColor = System.Drawing.Color.Transparent;
             this.trWordLabel.Font = new System.Drawing.Font("Segoe UI", 19.8F);
-            this.trWordLabel.Location = new System.Drawing.Point(115, 171);
-            this.trWordLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.trWordLabel.Location = new System.Drawing.Point(123, 211);
             this.trWordLabel.Name = "trWordLabel";
-            this.trWordLabel.Size = new System.Drawing.Size(123, 37);
+            this.trWordLabel.Size = new System.Drawing.Size(150, 45);
             this.trWordLabel.TabIndex = 33;
             this.trWordLabel.Text = "Merhaba";
             this.trWordLabel.Visible = false;
@@ -133,10 +131,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(0, 207);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(0, 255);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 21);
+            this.label1.Size = new System.Drawing.Size(184, 28);
             this.label1.TabIndex = 1;
             this.label1.Text = "Öğrenilen Kelimeler";
             this.label1.Click += new System.EventHandler(this.Label1_Click);
@@ -145,10 +142,10 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(8, 18);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(11, 22);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(132, 135);
+            this.pictureBox2.Size = new System.Drawing.Size(176, 166);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -165,13 +162,13 @@
             this.statisticBar.LabelVisible = true;
             this.statisticBar.LineProgressThickness = 8;
             this.statisticBar.LineThickness = 5;
-            this.statisticBar.Location = new System.Drawing.Point(1, 230);
-            this.statisticBar.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.statisticBar.Location = new System.Drawing.Point(1, 283);
+            this.statisticBar.Margin = new System.Windows.Forms.Padding(11, 9, 11, 9);
             this.statisticBar.MaxValue = 100;
             this.statisticBar.Name = "statisticBar";
             this.statisticBar.ProgressBackColor = System.Drawing.Color.White;
             this.statisticBar.ProgressColor = System.Drawing.Color.Red;
-            this.statisticBar.Size = new System.Drawing.Size(144, 144);
+            this.statisticBar.Size = new System.Drawing.Size(177, 177);
             this.statisticBar.TabIndex = 2;
             this.statisticBar.Value = 75;
             // 
@@ -187,11 +184,11 @@
             this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.Blue;
             this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.Indigo;
             this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.Orchid;
-            this.bunifuGradientPanel2.Location = new System.Drawing.Point(426, 0);
-            this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(568, 0);
+            this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(148, 396);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(197, 487);
             this.bunifuGradientPanel2.TabIndex = 37;
             // 
             // quizPageButton
@@ -212,17 +209,17 @@
             this.quizPageButton.IdleFillColor = System.Drawing.Color.White;
             this.quizPageButton.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.quizPageButton.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.quizPageButton.Location = new System.Drawing.Point(91, 321);
-            this.quizPageButton.Margin = new System.Windows.Forms.Padding(4);
+            this.quizPageButton.Location = new System.Drawing.Point(91, 396);
+            this.quizPageButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.quizPageButton.Name = "quizPageButton";
-            this.quizPageButton.Size = new System.Drawing.Size(182, 37);
+            this.quizPageButton.Size = new System.Drawing.Size(243, 46);
             this.quizPageButton.TabIndex = 38;
             this.quizPageButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.quizPageButton.Click += new System.EventHandler(this.QuizPageButton_Click);
             // 
             // LearnWord
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.quizPageButton);
@@ -232,9 +229,9 @@
             this.Controls.Add(this.enWordLabel);
             this.Controls.Add(this.showWordButton);
             this.Controls.Add(this.trWordLabel);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LearnWord";
-            this.Size = new System.Drawing.Size(574, 396);
+            this.Size = new System.Drawing.Size(765, 487);
             this.Load += new System.EventHandler(this.LearnWord_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nextWordButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.previousWordButton)).EndInit();

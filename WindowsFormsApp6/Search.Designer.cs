@@ -77,10 +77,10 @@
             this.searchButton.IdleFillColor = System.Drawing.Color.White;
             this.searchButton.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.searchButton.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.searchButton.Location = new System.Drawing.Point(397, 12);
-            this.searchButton.Margin = new System.Windows.Forms.Padding(4);
+            this.searchButton.Location = new System.Drawing.Point(518, 15);
+            this.searchButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(55, 45);
+            this.searchButton.Size = new System.Drawing.Size(80, 55);
             this.searchButton.TabIndex = 14;
             this.searchButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.searchButton.Click += new System.EventHandler(this.SearchButton_Click);
@@ -97,10 +97,10 @@
             this.searchText.LineIdleColor = System.Drawing.Color.Gray;
             this.searchText.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.searchText.LineThickness = 3;
-            this.searchText.Location = new System.Drawing.Point(16, 13);
-            this.searchText.Margin = new System.Windows.Forms.Padding(4);
+            this.searchText.Location = new System.Drawing.Point(5, 15);
+            this.searchText.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.searchText.Name = "searchText";
-            this.searchText.Size = new System.Drawing.Size(377, 39);
+            this.searchText.Size = new System.Drawing.Size(503, 48);
             this.searchText.TabIndex = 13;
             this.searchText.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -114,9 +114,10 @@
             this.columnHeader4,
             this.columnHeader5});
             this.searchListView.FullRowSelect = true;
-            this.searchListView.Location = new System.Drawing.Point(11, 67);
+            this.searchListView.Location = new System.Drawing.Point(15, 82);
+            this.searchListView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.searchListView.Name = "searchListView";
-            this.searchListView.Size = new System.Drawing.Size(559, 260);
+            this.searchListView.Size = new System.Drawing.Size(744, 319);
             this.searchListView.TabIndex = 15;
             this.searchListView.UseCompatibleStateImageBehavior = false;
             this.searchListView.View = System.Windows.Forms.View.Details;
@@ -170,10 +171,10 @@
             this.addListButton.IdleFillColor = System.Drawing.Color.White;
             this.addListButton.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.addListButton.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.addListButton.Location = new System.Drawing.Point(11, 331);
-            this.addListButton.Margin = new System.Windows.Forms.Padding(4);
+            this.addListButton.Location = new System.Drawing.Point(5, 405);
+            this.addListButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.addListButton.Name = "addListButton";
-            this.addListButton.Size = new System.Drawing.Size(144, 43);
+            this.addListButton.Size = new System.Drawing.Size(226, 53);
             this.addListButton.TabIndex = 16;
             this.addListButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.addListButton.Click += new System.EventHandler(this.AddListButton_Click);
@@ -196,10 +197,10 @@
             this.deleteWordButton.IdleFillColor = System.Drawing.Color.White;
             this.deleteWordButton.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.deleteWordButton.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.deleteWordButton.Location = new System.Drawing.Point(163, 329);
-            this.deleteWordButton.Margin = new System.Windows.Forms.Padding(4);
+            this.deleteWordButton.Location = new System.Drawing.Point(233, 405);
+            this.deleteWordButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.deleteWordButton.Name = "deleteWordButton";
-            this.deleteWordButton.Size = new System.Drawing.Size(105, 45);
+            this.deleteWordButton.Size = new System.Drawing.Size(140, 55);
             this.deleteWordButton.TabIndex = 17;
             this.deleteWordButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.deleteWordButton.Click += new System.EventHandler(this.DeleteWordButton_Click);
@@ -222,10 +223,10 @@
             this.updateWordButton.IdleFillColor = System.Drawing.Color.White;
             this.updateWordButton.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.updateWordButton.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.updateWordButton.Location = new System.Drawing.Point(273, 329);
-            this.updateWordButton.Margin = new System.Windows.Forms.Padding(4);
+            this.updateWordButton.Location = new System.Drawing.Point(381, 405);
+            this.updateWordButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.updateWordButton.Name = "updateWordButton";
-            this.updateWordButton.Size = new System.Drawing.Size(156, 45);
+            this.updateWordButton.Size = new System.Drawing.Size(208, 55);
             this.updateWordButton.TabIndex = 18;
             this.updateWordButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.updateWordButton.Click += new System.EventHandler(this.UpdateWordButton_Click);
@@ -235,10 +236,10 @@
             this.AddWordPageButton.BackColor = System.Drawing.Color.Transparent;
             this.AddWordPageButton.Image = ((System.Drawing.Image)(resources.GetObject("AddWordPageButton.Image")));
             this.AddWordPageButton.ImageActive = null;
-            this.AddWordPageButton.Location = new System.Drawing.Point(526, 334);
-            this.AddWordPageButton.Margin = new System.Windows.Forms.Padding(2);
+            this.AddWordPageButton.Location = new System.Drawing.Point(706, 407);
+            this.AddWordPageButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddWordPageButton.Name = "AddWordPageButton";
-            this.AddWordPageButton.Size = new System.Drawing.Size(44, 43);
+            this.AddWordPageButton.Size = new System.Drawing.Size(59, 53);
             this.AddWordPageButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.AddWordPageButton.TabIndex = 19;
             this.AddWordPageButton.TabStop = false;
@@ -263,10 +264,10 @@
             this.randomButton.IdleFillColor = System.Drawing.Color.White;
             this.randomButton.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.randomButton.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.randomButton.Location = new System.Drawing.Point(437, 329);
-            this.randomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.randomButton.Location = new System.Drawing.Point(594, 405);
+            this.randomButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.randomButton.Name = "randomButton";
-            this.randomButton.Size = new System.Drawing.Size(79, 45);
+            this.randomButton.Size = new System.Drawing.Size(105, 55);
             this.randomButton.TabIndex = 20;
             this.randomButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.randomButton.Click += new System.EventHandler(this.RandomButton_Click);
@@ -289,10 +290,10 @@
             this.myListButton.IdleFillColor = System.Drawing.Color.White;
             this.myListButton.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.myListButton.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.myListButton.Location = new System.Drawing.Point(460, 11);
-            this.myListButton.Margin = new System.Windows.Forms.Padding(4);
+            this.myListButton.Location = new System.Drawing.Point(601, 14);
+            this.myListButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.myListButton.Name = "myListButton";
-            this.myListButton.Size = new System.Drawing.Size(110, 45);
+            this.myListButton.Size = new System.Drawing.Size(159, 55);
             this.myListButton.TabIndex = 21;
             this.myListButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.myListButton.Click += new System.EventHandler(this.MyListButton_Click);
@@ -307,18 +308,20 @@
             this.updatePanel.Controls.Add(this.updateWordButton2);
             this.updatePanel.Controls.Add(this.trWordTextBox);
             this.updatePanel.Controls.Add(this.enWordTextBox);
-            this.updatePanel.Location = new System.Drawing.Point(29, 48);
+            this.updatePanel.Location = new System.Drawing.Point(53, 38);
+            this.updatePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.updatePanel.Name = "updatePanel";
-            this.updatePanel.Size = new System.Drawing.Size(492, 309);
+            this.updatePanel.Size = new System.Drawing.Size(655, 380);
             this.updatePanel.TabIndex = 22;
             this.updatePanel.Visible = false;
             // 
             // wordIDLabel
             // 
             this.wordIDLabel.AutoSize = true;
-            this.wordIDLabel.Location = new System.Drawing.Point(224, 30);
+            this.wordIDLabel.Location = new System.Drawing.Point(299, 37);
+            this.wordIDLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.wordIDLabel.Name = "wordIDLabel";
-            this.wordIDLabel.Size = new System.Drawing.Size(47, 13);
+            this.wordIDLabel.Size = new System.Drawing.Size(59, 17);
             this.wordIDLabel.TabIndex = 28;
             this.wordIDLabel.Text = "Word ID";
             this.wordIDLabel.Visible = false;
@@ -328,10 +331,10 @@
             this.updateCloseButton.BackColor = System.Drawing.Color.Transparent;
             this.updateCloseButton.Image = ((System.Drawing.Image)(resources.GetObject("updateCloseButton.Image")));
             this.updateCloseButton.ImageActive = null;
-            this.updateCloseButton.Location = new System.Drawing.Point(468, 2);
-            this.updateCloseButton.Margin = new System.Windows.Forms.Padding(2);
+            this.updateCloseButton.Location = new System.Drawing.Point(624, 2);
+            this.updateCloseButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.updateCloseButton.Name = "updateCloseButton";
-            this.updateCloseButton.Size = new System.Drawing.Size(22, 24);
+            this.updateCloseButton.Size = new System.Drawing.Size(29, 30);
             this.updateCloseButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.updateCloseButton.TabIndex = 27;
             this.updateCloseButton.TabStop = false;
@@ -341,10 +344,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(97, 78);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(129, 96);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(39, 32);
+            this.pictureBox2.Size = new System.Drawing.Size(52, 39);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 26;
             this.pictureBox2.TabStop = false;
@@ -352,10 +355,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(97, 128);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(129, 158);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 34);
+            this.pictureBox1.Size = new System.Drawing.Size(52, 42);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
@@ -378,10 +381,10 @@
             this.updateWordButton2.IdleFillColor = System.Drawing.Color.White;
             this.updateWordButton2.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.updateWordButton2.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.updateWordButton2.Location = new System.Drawing.Point(142, 187);
-            this.updateWordButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.updateWordButton2.Location = new System.Drawing.Point(189, 230);
+            this.updateWordButton2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.updateWordButton2.Name = "updateWordButton2";
-            this.updateWordButton2.Size = new System.Drawing.Size(241, 45);
+            this.updateWordButton2.Size = new System.Drawing.Size(321, 55);
             this.updateWordButton2.TabIndex = 24;
             this.updateWordButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.updateWordButton2.Click += new System.EventHandler(this.UpdateWordButton2_Click);
@@ -398,10 +401,10 @@
             this.trWordTextBox.LineIdleColor = System.Drawing.Color.Gray;
             this.trWordTextBox.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.trWordTextBox.LineThickness = 3;
-            this.trWordTextBox.Location = new System.Drawing.Point(142, 130);
-            this.trWordTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.trWordTextBox.Location = new System.Drawing.Point(189, 160);
+            this.trWordTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.trWordTextBox.Name = "trWordTextBox";
-            this.trWordTextBox.Size = new System.Drawing.Size(241, 32);
+            this.trWordTextBox.Size = new System.Drawing.Size(321, 39);
             this.trWordTextBox.TabIndex = 23;
             this.trWordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -417,16 +420,16 @@
             this.enWordTextBox.LineIdleColor = System.Drawing.Color.Gray;
             this.enWordTextBox.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.enWordTextBox.LineThickness = 3;
-            this.enWordTextBox.Location = new System.Drawing.Point(142, 78);
-            this.enWordTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.enWordTextBox.Location = new System.Drawing.Point(189, 96);
+            this.enWordTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.enWordTextBox.Name = "enWordTextBox";
-            this.enWordTextBox.Size = new System.Drawing.Size(241, 32);
+            this.enWordTextBox.Size = new System.Drawing.Size(321, 39);
             this.enWordTextBox.TabIndex = 22;
             this.enWordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // Search
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.updatePanel);
@@ -439,9 +442,9 @@
             this.Controls.Add(this.searchListView);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.searchText);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Search";
-            this.Size = new System.Drawing.Size(574, 396);
+            this.Size = new System.Drawing.Size(765, 487);
             this.Load += new System.EventHandler(this.Search_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AddWordPageButton)).EndInit();
             this.updatePanel.ResumeLayout(false);
