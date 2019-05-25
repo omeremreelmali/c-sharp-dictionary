@@ -3,7 +3,6 @@
 Geliştirenler -> Ömer Emre Elmalı, Onur Yüksekkaya
 
 # c-sharp-dictionary
-#C# (English-Turkish) Dictionary
 # English-Dictionary-Mysql
 # English-Turkish Dictionary with 
 # search algorithms
