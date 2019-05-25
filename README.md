@@ -1,5 +1,9 @@
+
+
+Geliştirenler -> Ömer Emre Elmalı, Onur Yüksekkaya
+
 # c-sharp-dictionary
-C# (English-Turkish) Dictionary
+#C# (English-Turkish) Dictionary
 # English-Dictionary-Mysql
 # English-Turkish Dictionary with 
 # search algorithms
@@ -7,7 +11,6 @@ C# (English-Turkish) Dictionary
 # 2500+ word
 # add word
 # word exam
-Geliştirenler -> Ömer Emre Elmalı, Onur Yüksekkaya
 ![Screenshot_1](https://user-images.githubusercontent.com/51006791/58370274-4b87bc80-7f0d-11e9-847c-d06167454468.png)
 ![Screenshot_2](https://user-images.githubusercontent.com/51006791/58370275-4b87bc80-7f0d-11e9-9197-c4a176a0bebd.png)
 ![Screenshot_3](https://user-images.githubusercontent.com/51006791/58370276-4c205300-7f0d-11e9-92aa-c4927daba395.png)
